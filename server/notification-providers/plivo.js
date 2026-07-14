@@ -18,6 +18,7 @@ class Plivo extends NotificationProvider {
                         "Basic " +
                         Buffer.from(notification.plivoAuthID + ":" + notification.plivoAuthToken).toString("base64"),
                 },
+                timeout: 10000,
             };
             config = this.getAxiosConfigWithProxy(config);
 

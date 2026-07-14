@@ -71,7 +71,14 @@
 
     <div class="mb-3">
         <i18n-t tag="p" keypath="More info on:" style="margin-top: 8px">
-            <a href="https://www.plivo.com/docs/messaging/api/message" target="_blank">
+            <a
+                v-if="$parent.notification.plivoMessageType === 'call'"
+                href="https://www.plivo.com/docs/voice/api/call"
+                target="_blank"
+            >
+                https://www.plivo.com/docs/voice/api/call
+            </a>
+            <a v-else href="https://www.plivo.com/docs/messaging/api/message" target="_blank">
                 https://www.plivo.com/docs/messaging/api/message
             </a>
         </i18n-t>
