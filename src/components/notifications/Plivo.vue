@@ -50,11 +50,7 @@
 
     <div class="mb-3">
         <label for="plivo-message-type" class="form-label">{{ $t("plivoMessageType") }}</label>
-        <select
-            id="plivo-message-type"
-            v-model="$parent.notification.plivoMessageType"
-            class="form-select"
-        >
+        <select id="plivo-message-type" v-model="$parent.notification.plivoMessageType" class="form-select">
             <option value="sms">SMS</option>
             <option value="call">{{ $t("plivoVoiceCall") }}</option>
         </select>
